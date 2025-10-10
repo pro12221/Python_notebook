@@ -20,3 +20,26 @@ print(t1 + '\n' + t2)
 
 
 ## 列表
+
+# 1、列表类型是用索引来对应值，索引代表的是数据的位置，从0开始计数
+stu_names=['张三','李四','王五']
+print(stu_names[0],stu_names[1],stu_names[2])
+
+# 2、列表可以嵌套，嵌套取值如下
+students_info=[['tony',18,['jack',]],['jason',18,['play','sleep']]]
+print(students_info[0][2][0])
+
+
+## 字典
+# 1、字典类型是用key来对应值，key可以对值有描述性的功能，通常为字符串类型
+person_info={'name':'tony','age':18,'height':185.3}
+print(person_info["name"])
+print(person_info["age"])
+print(person_info["height"])
+# 2、字典可以嵌套，嵌套取值如下
+students=[
+{'name':'tony','age':38,'hobbies':['play','sleep']},
+{'name':'jack','age':18,'hobbies':['read','sleep']},
+{'name':'rose','age':58,'hobbies':['music','read','sleep']},
+]
+print(students[1]["hobbies"][1])
