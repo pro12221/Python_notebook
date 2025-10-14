@@ -43,3 +43,89 @@ students=[
 {'name':'rose','age':58,'hobbies':['music','read','sleep']},
 ]
 print(students[1]["hobbies"][1])
+
+
+
+# 字符串类型方法
+str1="hello world"
+## 正向和反向取值
+print(str1[1],str1[-1])
+## 切片(顾头不顾尾)
+print(str1[0:2])
+print(str1[0:3:2])# 取0-3，步长为2
+print(str1[::-1])# 反向取出字符串
+
+## strip移除字符串首尾指定的字符
+str2=" **hel lo** "
+print(str2.strip()) ## strip括号内无字符指定移除空格
+str2="**hel lo**"
+print(str2.strip("*")) # 指定括号内指定字符
+
+## 切分split
+str3="hello world"
+print(str3.split())#括号内不指定字符，默认已空格作为切分符号
+str4="127.0.0.1"
+print(str4.split("."))#括号内指定字符,已.作为分割
+
+## lower,upper
+str5="Hello,World!"
+print(str5.lower(),str5.upper())# 全部转换为大写或者小写
+
+## startswith，endswith
+str3 = 'tony jam'
+# startswith()判断字符串是否以括号内指定的字符开头，结果为布尔值True或False
+print(str3.startswith('t'))
+# endswith()判断字符串是否以括号内指定的字符结尾，结果为布尔值True或False
+print(str3.endswith('jam'))
+
+## join操作
+# 从可迭代对象中取出多个字符串，然后按照指定的分隔符进行拼接，拼接的结果为字符串
+print('%'.join('hello')) # 从字符串'hello'中取出多个字符串，然后按照%作为分隔符号进行拼接
+print('|'.join(['tony','18','read']) ) # 从列表中取出多个字符串，然后按照*作为分隔符号进行拼接
+
+## replace
+# 用新的字符替换字符串中旧的字符
+str7 = 'my name is tony, my age is 18!'  # 将tony的年龄由18岁改成73岁
+str7 = str7.replace('18', '73')  # 语法:replace('旧内容', '新内容')
+
+# 可以指定修改的个数
+str7 = 'my name is tony, my age is 18!'
+str7 = str7.replace('my', 'MY', 1)  # 只把一个my改为MY
+
+
+# 列表类型操作
+## 按照索引修改指定位置的值
+list1=["tony","18","read"]
+list1[0]="mkie"
+print(list1)
+## 切片（同字符串）
+
+## append
+list1.append(1) # 在列表尾部追加元素
+print(list1)
+
+## extend
+list1.extend([1,2,3]) # 一次性在列表尾部添加多个元素
+print(list1)
+
+## insert
+list1.insert(1,'jack') # 在列表一号索引插入元素
+print(list1)
+
+## del
+del list1[0] #删除0号索引对应元素
+print(list1)
+
+## pop默认删除最后一个元素并返回,括号内可以加索引来指定删除元素
+test=list1.pop()
+print(test)
+
+## remove 括号内指定要删除的元素，没有返回值
+list1.remove(1) # 重复的都删除
+print(list1)
+
+## reverse 颠倒列表内元素顺序
+list1.reverse()
+print(list1)
+
+## sort 给列表排序，列表之间元素必须是相同数据类型
