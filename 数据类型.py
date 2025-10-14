@@ -133,3 +133,50 @@ print(list1)
 
 ## sort 给列表排序，列表之间元素必须是相同数据类型
 print("-------------------------------------------------------元祖类型常用方法-------------------------------------------------")
+## 元组类型，不能改变值
+
+print("-------------------------------------------------------字典类型常用方法-------------------------------------------------")
+## 字典类型
+dict1={
+    "name":"tony",
+    "age":18,
+    "height":185.3
+}
+## 按key存取
+print(dict1["name"])
+dict1["hobbies"]=["read","sleep"] # 存储key时若key不存在则新增key:value,如果key存在则修改原value
+print(dict1)
+
+## 删除key
+res=dict1.pop("hobbies") # 指定key来删除
+print(res,dict1)
+
+## get方法取值
+print(dict1.get("name"))
+
+## popitem
+dic= {'k1':'jason','k2':'Tony','k3':'JY'}
+item = dic.popitem()  # 随机删除一组键值对,并将删除的键值放到元组内返回
+print(item)
+
+## update
+# 用新字典更新旧字典，有则修改，无则添加
+dic= {'k1':'jason','k2':'Tony','k3':'JY'}
+dic.update({'k1':'JN','k4':'xxx'})
+print(dic)
+
+## fromkeys
+x=dic = dict.fromkeys(['k1','k2','k3'],["x","y","z"])
+print(x) # {'k1': ['x', 'y', 'z'], 'k2': ['x', 'y', 'z'], 'k3': ['x', 'y', 'z']}
+
+## setdefault
+# key不存在则新增键值对，并将新增的value返回
+dic = {'k1': 111, 'k2': 222}
+res = dic.setdefault('k3', 333)
+
+
+# key存在则不做任何修改，并返回已存在key对应的value值
+dic = {'k1': 111, 'k2': 222}
+res = dic.setdefault('k1', 666)
+print(dic)
+print("-------------------------------------------------------集合类型常用方法-------------------------------------------------")
