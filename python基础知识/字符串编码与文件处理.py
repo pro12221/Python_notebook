@@ -39,7 +39,7 @@
 # 文件处理
 ## 文件处理分为三个步骤
 ### 打开文件，获得文件对象
-f=open(r"文件处理/test.txt",mode="rt",encoding="utf-8") # r表示字符串里的反斜杠\不会被当成转义字符处理
+f=open(r"文件处理/test.txt", mode="rt", encoding="utf-8") # r表示字符串里的反斜杠\不会被当成转义字符处理
 
 ### 读写等操作
 f.read()
@@ -48,7 +48,7 @@ f.read()
 f.close()
 
 ### with语法不用再关闭文件
-with open(r"文件处理/test.txt",mode="rt",encoding="utf-8") as f:
+with open(r"文件处理/test.txt", mode="rt", encoding="utf-8") as f:
     print(f.read())
 
 
