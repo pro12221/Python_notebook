@@ -1,11 +1,10 @@
-def func(start,stop,step):
-    while start < stop:
-        yield start
-        start += step
+l = [1, [2, [3, [4]]]]
 
-start = func(1, 5, 3)
-for i in start:
-    print(i)
+def f(lst):  # 添加参数
+    for item in lst:
+        if type(item) is list:
+            f(item)  # 递归调用时传递参数
+        else:
+            print(item)
 
-print(type(start))
-print(type(func))
+f(l)  # 调用时传递参数
